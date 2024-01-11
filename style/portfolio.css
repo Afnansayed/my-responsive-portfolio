@@ -1,9 +1,9 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
+/* common css  */
+  * {
     margin: 0;
     padding: 0;
-    /* background-color: rgb(37, 115, 183); */
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -21,11 +21,16 @@ p{
     padding: 10px;
     cursor: pointer;
 }
+/* header nav */
 #header {
     background-color: #FFF;
     width: 80%;
     max-width: 1300px;
     margin: auto;
+    background-image: url('../images/header_bg.png'), url('../images/developer.png');
+    background-repeat: no-repeat;
+    background-position: bottom right , bottom left;
+
 }
 
 .nav .nav-section {
@@ -60,13 +65,13 @@ li a {
     text-decoration: none;
     list-style: none;
     color: #757575;
-
+    font-size: 23px;
 }
 
+/* end header nav */
+/* strat bannner */
 .banner {
     display: flex;
-    background-image: url(../images/header_bg.png);
-    background: no-repeat;
 }
 
 .banner-col h2 {
@@ -89,8 +94,29 @@ li a {
 }
 .banner-col button{
     margin-right: 20px;
+    transition-duration: 1s;
+}
+.btn-primary:hover{
+    color: gray;
+    background-color: aliceblue;
 } 
 .banner img {
     width: 100%;
+    margin-left: 50px;
     vertical-align: bottom;
+}
+/* end banner */
+/* Smaller device */
+@media screen and (max-width : 576px) {
+    #header{
+         width: 100%;
+    }
+    .banner{
+        flex-direction: column;
+        gap: 10px;
+    } 
+    .nav-section .navcol {
+         width: 100%;
+    }
+
 }
