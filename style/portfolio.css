@@ -118,5 +118,8 @@ li a {
     .nav-section .navcol {
          width: 100%;
     }
+    .nav .nav-section{
+        flex-direction: column-reverse
+    }
 
 }
